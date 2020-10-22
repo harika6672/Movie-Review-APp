@@ -59,7 +59,7 @@ export function fetchMovies(page,limit) {
   return (dispatch) => {
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/movies?_page=${page}&_limit=${limit}`)
+      .get(`/movies?_page=${page}&_limit=${limit}`)
 
       .then((res) => {
         console.log(res);
