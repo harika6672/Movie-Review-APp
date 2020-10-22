@@ -1,0 +1,13 @@
+html,
+body {
+  min-height: 100%;
+  background-image: linear-gradient(to bottom right, #33ccff, yellow);
+  background-repeat: no-repeat;
+}
+.hscroll {
+  overflow-x: auto;
+}
+.pagination {
+  padding-top: 20px;
+  margin: auto;
+}

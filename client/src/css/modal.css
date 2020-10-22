@@ -1,0 +1,9 @@
+#btnStyling {
+  background-image: "linear-gradient(to bottom right, #33ccff, yellow)";
+  padding: "6px 2px";
+  border-radius: "1rem";
+  border: "1px solid #0099ff";
+  width: "150px";
+  color: "#0099ff";
+  font: "16px";
+}

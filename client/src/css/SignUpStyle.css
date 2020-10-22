@@ -1,0 +1,47 @@
+.signUpStyle {
+  /* width: 300px; */
+  height: 300px;
+
+  margin-top: 30px;
+  background-blend-mode: lighten;
+
+  padding: 1.5em 2em;
+  max-width: 20em;
+
+  border: 1px solid rgb(200, 200, 200);
+
+  background-color: rgb(245, 245, 245);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+
+  border-radius: 2px;
+}
+
+.sign-div {
+  width: 250px;
+  margin-top: 10px;
+}
+#msign {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  padding: 10px 10px 10px 0px;
+  font-weight: 500;
+}
+#sign {
+  margin-left: 10px;
+  font-style: italic;
+}
+.account {
+  margin-top: 40px;
+  padding: 10px;
+  font-weight: 500;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+}
+#account {
+  margin-bottom: 8px;
+}
