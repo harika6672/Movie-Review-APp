@@ -7,7 +7,12 @@ const loginRouter = require("./routes/LoginRouter");
 const commentRouter = require("./routes/CommentRouter");
 const app = express();
 const cors = require("cors");
-
+if(process.env.NODE_ENV==="production"){
+  app.use(express.static('client/build'))
+  app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+  })
+}
 app.use(express.json());
 
 // app.use(function (req, res, next) {
@@ -18,6 +23,7 @@ app.use(express.json());
 //   );
 //   next();
 // });
+
 app.use(cors());
 app.use((req, res, next) => {
   console.log("Hello from the middleware 👋");
