@@ -46,7 +46,7 @@ function App() {
         <Route path="/signin" component={SignIn} />
         <Route path="/ways/signup" component={SignUpHome} />
         <Route path="/allmovies" component={AllMoviesDisplay} />
-        <Route path="/movie/:id" component={MovieDisplay} />
+        <Route path="/movie-view/:id" component={MovieDisplay} />
         <Route path="/genre/:gname" component={GenreSpecific} />
         <Route path="/language/:lname" component={LanguageSpecific} />
         <Route path="/category/:cname" component={CategorySpecific} />
