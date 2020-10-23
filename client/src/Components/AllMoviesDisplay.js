@@ -63,7 +63,7 @@ const AllMoviesDisplay = (props) => {
       {pending ? (
     <div style={{ textAlign: "center" }}>
       <Loader type="Grid" color="#00BFFF" height={100} width={100} />
-    </div>):(posts.length!==0?posts:<h6 style={{color:'blue', fontStyle:"italic", paddingTop:"10px"}}>No Search Results Found</h6>)}
+    </div>):(posts.length!==0 && pending===false?posts:<h6 style={{color:'blue', fontStyle:"italic", paddingTop:"10px"}}>No Search Results Found</h6>)}
       <div className="col-12">
     {movies.length>0?
    
