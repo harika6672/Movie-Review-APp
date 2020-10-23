@@ -47,7 +47,7 @@ const AllMoviesDisplay = (props) => {
           <img src={movie.movieImg} alt="img" border="0" />
         </a>
         <h2 style={{fontStyle:"italic"}}>
-          <Link to={`/movie/:${movie._id}`}>{movie.movieName}</Link>
+          <Link to={`/movie-view/:${movie._id}`}>{movie.movieName}</Link>
         </h2>
       </div>
       )

@@ -29,7 +29,7 @@ const LanguageSpecific = (props) => {
             <img src={movie.movieImg} alt="img" border="0" />
 
             <h2>
-              <Link to={`/movie/:${movie._id}`}>{movie.movieName}</Link>
+              <Link to={`/movie-view/:${movie._id}`}>{movie.movieName}</Link>
             </h2>
 
             <p>{movie.summary}</p>
