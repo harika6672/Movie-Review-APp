@@ -34,8 +34,8 @@ const AddComment = (props) => {
         .post("/comments", commentObj)
         .then((res) => {
           console.log(res);
-          setComment(" ");
-          setTimeout(()=>window.location.reload(), 2000);
+          setComment("");
+          
         })
         .catch((err) => {
           console.log(err);
