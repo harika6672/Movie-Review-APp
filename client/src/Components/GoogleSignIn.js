@@ -14,7 +14,7 @@ const GoogleSignIn = (props) => {
       localStorage.setItem("user_stored", res.data.user.name);
       localStorage.setItem("access", res.data.user.role);
       if(props.data){
-      history.push(`/movie/:${props.data}`);
+      history.push(`/movie-view/:${props.data}`);
       window.location.reload();
   }
       else
