@@ -25,6 +25,9 @@ export function fetchGenres() {
         console.log(res);
         dispatch(fetchGenresSuccess(res));
         return res;
+      }).catch(err=>{
+        console.log(err)
+        return null
       });
   };
 }
@@ -38,6 +41,9 @@ export function fetchLanguages() {
         console.log(res);
         dispatch(fetchLanguagesSuccess(res));
         return res;
+      }).catch(err=>{
+        console.log(err)
+        return null
       });
   };
 }
@@ -51,6 +57,9 @@ export function fetchCategories() {
         console.log(res);
         dispatch(fetchCategoriesSuccess(res));
         return res;
+      }).catch(err=>{
+        console.log(err)
+        return null
       });
   };
 }
@@ -65,6 +74,10 @@ export function fetchMovies(page,limit) {
         console.log(res);
         dispatch(fetchMoviesSuccess(res));
         return res;
+      })
+      .catch(err=>{
+        console.log(err)
+        return null
       });
   };
 }
