@@ -21,7 +21,7 @@ else{
 
       <div className="sign-div" id="msign">
         
-        <Link to={{pathname:"/signin",data:`${data.status}`}} id="sign">
+        <Link to={{pathname:"/sign-in",data:`${data.status}`}} id="sign">
           Signin through email
         </Link>
       </div>

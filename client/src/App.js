@@ -43,7 +43,7 @@ function App() {
         <Route path="/ways/signin" component={SignInHome} />
         <Route path="/google-signup" component={GoogleSignUp} />
         <Route path="/signup" component={SignUp} />
-        <Route path="/signin" component={SignIn} />
+        <Route path="/sign-in" component={SignIn} />
         <Route path="/ways/signup" component={SignUpHome} />
         <Route path="/allmovies" component={AllMoviesDisplay} />
         <Route path="/movie-view/:id" component={MovieDisplay} />
