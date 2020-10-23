@@ -62,6 +62,7 @@ exports.getmovieByIDController = async (req, res) => {
   let id=req.params.id
   if(req.params.id[0]===":"){
      id=(req.params.id).slice(1);
+     console.log(`on reload id is ${id}`)
   }
   try {
     const movie = await Movie.find({ _id: id });
