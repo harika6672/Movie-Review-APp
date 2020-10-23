@@ -11,6 +11,7 @@ const AllMoviesDisplay = (props) => {
   const { movies, fetchMovies, pending, count } = props;
   const [activePage, setPage]=useState(1)
   const [search, setSearch]=useState(null)
+  const [allposts, setPosts]=useState([])
   useEffect(() => {
     async function fetchData() {
    
@@ -51,7 +52,7 @@ const AllMoviesDisplay = (props) => {
       </div>
       )
   })
-
+setPosts(posts)
   return (
    
       <div>
@@ -62,7 +63,7 @@ const AllMoviesDisplay = (props) => {
       {pending ? (
     <div style={{ textAlign: "center" }}>
       <Loader type="Grid" color="#00BFFF" height={100} width={100} />
-    </div>):(posts.length!==0?posts:<h6 style={{color:'blue', fontStyle:"italic", paddingTop:"10px"}}>No Search Results Found</h6>)}
+    </div>):(allposts.length!==0?allposts:<h6 style={{color:'blue', fontStyle:"italic", paddingTop:"10px"}}>No Search Results Found</h6>)}
       <div className="col-12">
     {movies.length>0?
    

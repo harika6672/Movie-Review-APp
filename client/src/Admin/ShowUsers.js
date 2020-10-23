@@ -27,7 +27,7 @@ const ShowUsers = (props) => {
         console.log(res.status);
         // alert("Item Deleted");
         setAlert(true)
-        setTimeout(()=>window.location.reload(),5000)
+        setTimeout(()=>window.location.reload(),2000)
         
       })
       .catch((err) => {
