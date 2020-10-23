@@ -10,7 +10,7 @@ const SignUpHome = () => {
       </div>
 
       <div className="sign-div" id="msign">
-        <Link to="/signup" id="sign">
+        <Link to="/sign-up" id="sign">
           Signup through email
         </Link>
       </div>

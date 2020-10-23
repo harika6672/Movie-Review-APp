@@ -42,7 +42,7 @@ function App() {
         <Route path="/" exact component={AllMoviesDisplay} />
         <Route path="/ways/signin" component={SignInHome} />
         <Route path="/google-signup" component={GoogleSignUp} />
-        <Route path="/signup" component={SignUp} />
+        <Route path="/sign-up" component={SignUp} />
         <Route path="/sign-in" component={SignIn} />
         <Route path="/ways/signup" component={SignUpHome} />
         <Route path="/allmovies" component={AllMoviesDisplay} />
