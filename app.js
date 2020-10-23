@@ -5,6 +5,7 @@ const languageRouter = require("./routes/LanguageRouter");
 const categoryRouter = require("./routes/CategoryRouter");
 const loginRouter = require("./routes/LoginRouter");
 const commentRouter = require("./routes/CommentRouter");
+const path=require("path")
 const app = express();
 const cors = require("cors");
 
