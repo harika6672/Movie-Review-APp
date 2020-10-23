@@ -11,7 +11,7 @@ const GoogleSignUp = () => {
       tokenId: response.tokenId,
     };
     axios
-      .post("http://localhost:8000/signup/googlelogin", data)
+      .post("/signup/googlelogin", data)
       .then((res) => {
         console.log(res);
         if(res.data.status==="success"){

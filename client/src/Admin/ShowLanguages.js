@@ -20,7 +20,7 @@ const ShowLanguages = (props) => {
   const deleteItem = (l_id) => {
     console.log(l_id);
     axios
-      .delete(`http://localhost:8000/languages/${l_id}`)
+      .delete(`/languages/${l_id}`)
 
       .then((res) => {
         console.log(res.status);

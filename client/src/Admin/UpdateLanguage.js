@@ -29,7 +29,7 @@ const UpdateCategory = (props) => {
     e.preventDefault();
 
     axios
-      .patch(`http://localhost:8000/languages/${l_id}`, {
+      .patch(`/languages/${l_id}`, {
         language: inputRef.current.value,
       })
       .then((response) => {

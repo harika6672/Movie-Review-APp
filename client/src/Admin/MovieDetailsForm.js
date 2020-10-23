@@ -91,7 +91,7 @@ const MovieDetailsForm = (props) => {
 
       console.log(...data);
       axios
-        .post("http://localhost:8000/movies", data)
+        .post("/movies", data)
         .then((response) => {
           console.log(response);
           setAlert(true)

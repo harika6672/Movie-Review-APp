@@ -21,7 +21,7 @@ const ShowUsers = (props) => {
   const deleteItem = (u_id) => {
     console.log(u_id);
     axios
-      .delete(`http://localhost:8000/user/${u_id}`)
+      .delete(`/user/${u_id}`)
 
       .then((res) => {
         console.log(res.status);

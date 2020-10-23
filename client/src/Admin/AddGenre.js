@@ -12,7 +12,7 @@ const AddGenre = () => {
 
     console.log(genreObj);
     axios
-      .post("http://localhost:8000/genres", genreObj)
+      .post("/genres", genreObj)
       .then((response) => {
         console.log(response);
         setAlert(true)

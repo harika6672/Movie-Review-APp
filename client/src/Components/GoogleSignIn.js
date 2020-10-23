@@ -9,7 +9,7 @@ const GoogleSignIn = (props) => {
     const data = {
       tokenId: response.tokenId,
     };
-    axios.post("http://localhost:8000/signin/googlelogin", data).then((res) => {
+    axios.post(/signin/googlelogin", data).then((res) => {
       console.log(res);
       localStorage.setItem("user_stored", res.data.user.name);
       localStorage.setItem("access", res.data.user.role);

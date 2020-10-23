@@ -19,7 +19,7 @@ export function fetchGenres() {
   return (dispatch) => {
     dispatch(fetchDataPending());
     axios
-      .get("http://localhost:8000/genres")
+      .get("/genres")
 
       .then((res) => {
         console.log(res);
@@ -32,7 +32,7 @@ export function fetchLanguages() {
   return (dispatch) => {
     dispatch(fetchDataPending());
     axios
-      .get("http://localhost:8000/languages")
+      .get("/languages")
 
       .then((res) => {
         console.log(res);
@@ -45,7 +45,7 @@ export function fetchCategories() {
   return (dispatch) => {
     dispatch(fetchDataPending());
     axios
-      .get("http://localhost:8000/categories")
+      .get("/categories")
 
       .then((res) => {
         console.log(res);
@@ -73,7 +73,7 @@ export function fetchMovieByID(id) {
     console.log(id);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/movie/${id}`)
+      .get(`/movie/${id}`)
 
       .then((res) => {
         console.log(res);
@@ -87,7 +87,7 @@ export function fetchCategoriesByID(c_id) {
     console.log(c_id);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/categories/${c_id}`)
+      .get(`/categories/${c_id}`)
 
       .then((res) => {
         console.log("In fetch categories by id");
@@ -102,7 +102,7 @@ export function fetchGenresByID(g_id) {
     console.log(g_id);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/genres/${g_id}`)
+      .get(`/genres/${g_id}`)
 
       .then((res) => {
         console.log("In fetch genres by id");
@@ -118,7 +118,7 @@ export function fetchLanguagesByID(l_id) {
     console.log(l_id);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/languages/${l_id}`)
+      .get(`/languages/${l_id}`)
 
       .then((res) => {
         console.log("In fetch languages by id");
@@ -133,7 +133,7 @@ export function fetchMovieByGenre(genre) {
     console.log(genre);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/genre/movie/${genre}`)
+      .get(`/genre/movie/${genre}`)
 
       .then((res) => {
         console.log(res);
@@ -147,7 +147,7 @@ export function fetchMovieByLanguage(language) {
     console.log(language);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/language/movieSpecificLang/${language}`)
+      .get(`/language/movieSpecificLang/${language}`)
 
       .then((res) => {
         console.log(res);
@@ -161,7 +161,7 @@ export function fetchMovieByCategory(category) {
     console.log(category);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/category/movieCategory/${category}`)
+      .get(`/category/movieCategory/${category}`)
 
       .then((res) => {
         console.log(res);
@@ -177,7 +177,7 @@ export function fetchUsers() {
   return (dispatch) => {
     dispatch(fetchDataPending());
     axios
-      .get("http://localhost:8000/signin")
+      .get("/signin")
 
       .then((res) => {
         console.log(res);
@@ -205,7 +205,7 @@ export function fetchCommentsByID(id) {
     console.log(id);
     dispatch(fetchDataPending());
     axios
-      .get(`http://localhost:8000/comments/${id}`)
+      .get(`/comments/${id}`)
 
       .then((res) => {
         console.log(res);

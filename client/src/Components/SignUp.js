@@ -77,7 +77,7 @@ const SignUp = () => {
     }
     else{
     axios
-      .post("http://localhost:8000/signup", user)
+      .post("/signup", user)
       .then((response) => {
         console.log(response);
         if(response.data==="User already exists"){

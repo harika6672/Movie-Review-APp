@@ -29,7 +29,7 @@ const UpdateCategory = (props) => {
     e.preventDefault();
 
     axios
-      .patch(`http://localhost:8000/genres/${g_id}`, {
+      .patch(`/genres/${g_id}`, {
         genre: inputRef.current.value,
       })
       .then((response) => {

@@ -31,7 +31,7 @@ const AddComment = (props) => {
     } else {
       console.log("In post block")
       axios
-        .post("http://localhost:8000/comments", commentObj)
+        .post("/comments", commentObj)
         .then((res) => {
           console.log(res);
           setComment(" ");

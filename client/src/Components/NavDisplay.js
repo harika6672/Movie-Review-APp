@@ -44,15 +44,7 @@ const Navbar = (props) => {
   };
 
   useEffect(() => {
-    // axios("http://localhost:8000/genres").then((res) => {
-    //   setGenre(res.data.data.genres);
-    // });
-    // axios("http://localhost:8000/languages").then((res) => {
-    //   setLang(res.data.data.languages);
-    // });
-    // axios("http://localhost:8000/categories").then((res) => {
-    //   setCategory(res.data.data.categories);
-    // });
+    
     fetchGenres();
     fetchLanguages();
     fetchCategories();

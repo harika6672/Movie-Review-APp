@@ -19,7 +19,7 @@ const ShowCategories = (props) => {
   const deleteItem = (g_id) => {
     console.log(g_id);
     axios
-      .delete(`http://localhost:8000/genres/${g_id}`)
+      .delete(`/genres/${g_id}`)
 
       .then((res) => {
         console.log(res.status);

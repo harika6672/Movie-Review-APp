@@ -21,7 +21,7 @@ const AddUser = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8000/AddUser", user)
+      .post("/AddUser", user)
       .then((response) => {
         console.log(response);
         setAlert(true)

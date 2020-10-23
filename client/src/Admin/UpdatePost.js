@@ -70,7 +70,7 @@ const UpdatePost = (props) => {
 
       console.log(obj);
       axios
-        .patch(`http://localhost:8000/movie/${id}`, obj)
+        .patch(`/movie/${id}`, obj)
         .then((response) => {
           console.log(response);
           clearFields();

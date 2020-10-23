@@ -12,7 +12,7 @@ const AddLanguage = () => {
 
     console.log(langObj);
     axios
-      .post("http://localhost:8000/languages", langObj)
+      .post("/languages", langObj)
       .then((response) => {
         console.log(response);
         setAlert(true)

@@ -17,7 +17,7 @@ const ShowCategories = (props) => {
   const deleteItem = (c_id) => {
     console.log(c_id);
     axios
-      .delete(`http://localhost:8000/categories/${c_id}`)
+      .delete(`/categories/${c_id}`)
 
       .then((res) => {
         console.log(res.status);

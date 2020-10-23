@@ -23,7 +23,7 @@ count,
   const deleteItem = (p_id) => {
     console.log(p_id);
     axios
-      .delete(`http://localhost:8000/movie/${p_id}`)
+      .delete(`/movie/${p_id}`)
 
       .then((res) => {
         console.log(res.status);

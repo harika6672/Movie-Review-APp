@@ -12,7 +12,7 @@ const AddCategory = () => {
 
     console.log(categoryObj);
     axios
-      .post("http://localhost:8000/categories", categoryObj)
+      .post("/categories", categoryObj)
       .then((response) => {
         console.log(response);
         setAlert(true)

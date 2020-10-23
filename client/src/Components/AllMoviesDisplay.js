@@ -13,7 +13,7 @@ const AllMoviesDisplay = (props) => {
   const [search, setSearch]=useState(null)
   useEffect(() => {
     async function fetchData() {
-      // const movies = await axios("http://localhost:8000/movies");
+   
       fetchMovies(1,5);
     }
     fetchData();
