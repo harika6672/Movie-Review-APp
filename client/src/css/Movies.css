@@ -19,7 +19,7 @@
   }
 }
 /* ipad */
-@media (min-width: 700px) and (max-width: 1000px) and (orientation: landscape) {
+@media (min-width: 700px) and (max-width: 1000px) {
   .post_movie img {
     width: 500px;
     height: 600px;
@@ -37,7 +37,7 @@
   }
 }
 /* laptops */
-@media (min-width: 1400px) and (orientation: landscape) {
+@media (min-width: 1400px) {
   .post_movie img {
     width: 700px;
     height: 600px;
@@ -49,12 +49,28 @@
   }
 }
 /* mobile screens */
-@media (max-width: 480px) and (orientation: landscape) {
+@media (max-width: 480px) {
   .post_movie img {
     width: 80%;
     height: 80%;
     margin-left: 30px;
     margin-top: 20px;
+    position: ;
+  }
+  p,
+  li,
+  h4,
+  h6 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .post_movie img {
+    width: 80%;
+    height: 80%;
+    margin-left: 30px;
+    margin-top: 20px;
+    position: ;
   }
   p,
   li,
