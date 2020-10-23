@@ -166,13 +166,13 @@ const Navbar = (props) => {
               </li>
               <li className="nav-item">
                 <Link to="/" className="nav-link">
-                  Home
+                  Home 
                 </Link>
               </li>
               <li
                 className="nav-item"
                 style={
-                  user_access === "admin"
+                  user_access === "admin" || user_access==="Admin"
                     ? { display: "block" }
                     : { display: "none" }
                 }
