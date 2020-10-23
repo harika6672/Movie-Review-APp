@@ -35,7 +35,7 @@ const AddComment = (props) => {
         .then((res) => {
           console.log(res);
           setComment("");
-          
+          window.location.reload();
         })
         .catch((err) => {
           console.log(err);
