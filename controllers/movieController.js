@@ -58,9 +58,13 @@ exports.getmovieController = async (req, res) => {
 };
 exports.getmovieByIDController = async (req, res) => {
   console.log("movie by id")
-  console.log(req.params.id)
+  console.log(req.params.id);
+  let id=req.params.id
+  if(req.params.id[0]===":"){
+     id=(req.params.id).slice(1);
+  }
   try {
-    const movie = await Movie.find({ _id: req.params.id });
+    const movie = await Movie.find({ _id: id });
     res.status(200).json({
       status: "success",
       data: {
