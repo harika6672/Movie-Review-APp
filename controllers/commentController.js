@@ -39,7 +39,7 @@ exports.getcommentController = async (req, res) => {
 };
 exports.getAllcommentController = async (req, res) => {
   try {
-    \
+    
     const comments = await Comment.find({  });
 
     res.status(200).json({
