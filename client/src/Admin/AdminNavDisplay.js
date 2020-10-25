@@ -49,6 +49,11 @@ const AdminNavDisplay = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/admin/show-comments" className="nav-link">
+                Show Comments
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/admin/add-category" className="nav-link">
                 Add Category
               </Link>

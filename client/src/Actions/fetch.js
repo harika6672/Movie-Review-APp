@@ -14,6 +14,7 @@ import {
   fetchCategoriesSuccessByID,
   fetchGenresSuccessByID,
   fetchLanguagesSuccessByID,
+  fetchCommentsSuccess
 } from "./action";
 export function fetchGenres() {
   return (dispatch) => {

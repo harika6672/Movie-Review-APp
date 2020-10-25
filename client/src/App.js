@@ -31,6 +31,7 @@ import UpdateLanguage from "./Admin/UpdateLanguage";
 import UpdatePost from "./Admin/UpdatePost";
 import { getRole } from "./Reducers/reducer";
 import ShowUsers from "./Admin/ShowUsers";
+import ShowComments from "./Admin/ShowComments";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route path="/admin/show-genres" component={ShowGenres} />
         <Route path="/admin/show-posts" component={ShowPosts} />
         <Route path="/admin/show-users" component={ShowUsers} />
+        <Route path="/admin/show-comments" component={ShowComments} />
         <Route path="/admin/add-category" component={AddCategory} />
         <Route path="/admin/add-genre" component={AddGenre} />
         <Route path="/admin/add-language" component={AddLanguage} />
