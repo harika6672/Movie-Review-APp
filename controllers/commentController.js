@@ -39,9 +39,9 @@ exports.getcommentController = async (req, res) => {
 };
 exports.getAllcommentController = async (req, res) => {
   try {
-    
+    console.log("In getting all comments");
     const all_comments = await Comment.find({  });
-
+    console.log(all_comments)
     res.status(200).json({
       status: "success",
       data: {
