@@ -80,9 +80,9 @@ export function fetchUsersSuccess(result) {
   };
 }
 export function fetchCommentsSuccess(result) {
-  console.log(result.data.data.comments);
+  console.log(result.data.data.all_comments);
   return {
-    type: FETCH_COMMENTS_SUCCESS,
+    type: FETCH_COMMENTS_ALL_SUCCESS,
     result: result.data.data.all_comments,
   };
 }
