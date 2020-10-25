@@ -202,6 +202,24 @@ export function fetchUsers() {
       });
   };
 }
+export function fetchComments() {
+  console.log("fetching comments");
+
+  return (dispatch) => {
+    dispatch(fetchDataPending());
+    axios
+      .get("/comments")
+
+      .then((res) => {
+        console.log(res);
+        dispatch(fetchCommentsSuccess(res));
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+}
 export function fetchAuthStatus(role, email, name) {
   return (dispatch) => {
     dispatch({

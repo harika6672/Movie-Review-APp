@@ -47,9 +47,9 @@ function App() {
         <Route path="/ways/signup" component={SignUpHome} />
         <Route path="/allmovies" component={AllMoviesDisplay} />
         <Route path="/movie-view/:id" component={MovieDisplay} />
-        <Route path="/genre/:gname" component={GenreSpecific} />
-        <Route path="/language/:lname" component={LanguageSpecific} />
-        <Route path="/category/:cname" component={CategorySpecific} />
+        <Route path="/genre-specific/:gname" component={GenreSpecific} />
+        <Route path="/language-specific/:lname" component={LanguageSpecific} />
+        <Route path="/category-specific/:cname" component={CategorySpecific} />
         <Route path="/movieform" component={MovieDetailsForm} />
         <Route path="/signout" component={SignOut} />
 

@@ -14,6 +14,7 @@ import {
   FETCH_CATEGORIES_BY_ID_SUCCESS,
   FETCH_GENRES_BY_ID_SUCCESS,
   FETCH_LANGUAGES_BY_ID_SUCCESS,
+  FETCH_COMMENTS_ALL_SUCCESS
 } from "../Actions/action";
 const initialState = {
   pending: false,
@@ -35,7 +36,8 @@ const initialState = {
   categoryById: [],
   genreById: [],
   languageById: [],
-  postsCount:0
+  postsCount:0,
+  commentsAll:[]
 };
 const arrayBufferToBase64 = (buffer) => {
   var binary = "";
@@ -124,6 +126,12 @@ export function mainReducer(state = initialState, action) {
         movie: filtering_data(action.result),
       };
     case FETCH_COMMENTS_SUCCESS:
+      return {
+        ...state,
+        pending: false,
+        comments: action.result,
+      };
+      case FETCH_COMMENTS_ALL_SUCCESS:
       return {
         ...state,
         pending: false,
@@ -235,4 +243,8 @@ export const getLanguageById = (state) => {
 export const getPostsCount=(state)=>{
   console.log(`Posts Count is ${state.postsCount}`)
   return state.postsCount
+}
+export const getAllComments=(state)=>{
+  console.log(`Comments are ${state.commentsAll}`)
+  return state.commentsAll
 }

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { fetchCategories } from "../Actions/fetch";
+import { fetchComments } from "../Actions/fetch";
 import axios from "axios";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { getCategories, getAuthValue, getRole } from "../Reducers/reducer";
+import { getAllComments, getAuthValue, getRole } from "../Reducers/reducer";
 
 const ShowComments = (props) => {
   const {
-    fetchCategories,
+    fetchComments,
 
-    categories,
+    all_comments,
 
     isAdmin,
   } = props;
@@ -17,7 +17,7 @@ const ShowComments = (props) => {
   const deleteItem = (c_id) => {
     console.log(c_id);
     axios
-      .delete(`/categories/${c_id}`)
+      .delete(`/comments/${c_id}`)
 
       .then((res) => {
         console.log(res.status);
@@ -30,34 +30,31 @@ const ShowComments = (props) => {
       });
   };
   useEffect(() => {
-    fetchCategories();
+    fetchComments();
   }, []);
   return (
     <>
      {
       alertdisplay?
     <div class="alert alert-primary" role="alert" >
-  Category got deleted!!
+  Comment got deleted!!
 </div>:""}
     <table className="table table-hover">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Category Name</th>
-          <th scope="col">Update Action</th>
+          <th scope="col">Post Name</th>
           <th scope="col">Delete Action</th>
         </tr>
       </thead>
       <tbody>
-        {categories.map((category, index) => (
-          <tr key={category._id}>
+        {all_comments.map((comment, index) => (
+          <tr key={comment._id}>
             <td>{index + 1}</td>
-            <td>{category.category}</td>
+            <td>{comment.post_id}</td>
+            <td>{comment.comment}</td>
             <td>
-              <Link to={`/admin/update-category/:${category._id}`}>Update</Link>
-            </td>
-            <td>
-              <a href="#" onClick={() => deleteItem(category._id)}>
+              <a href="#" onClick={() => deleteItem(comment._id)}>
                 Delete
               </a>
             </td>
@@ -69,12 +66,12 @@ const ShowComments = (props) => {
   );
 };
 const mapStateToProps = (state) => ({
-  categories: getCategories(state),
+  all_comments: getAllComments(state),
   isAuth: getAuthValue(state),
   isAdmin: getRole(state),
 });
 const mapDispatchToProps = {
-  fetchCategories,
+  fetchComments,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShowComments);

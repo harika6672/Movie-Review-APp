@@ -37,3 +37,41 @@ exports.getcommentController = async (req, res) => {
     });
   }
 };
+exports.getAllcommentController = async (req, res) => {
+  try {
+    \
+    const comments = await Comment.find({  });
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        all_comments,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};
+exports.deletecommentController = async (req, res) => {
+  console.log("In delete");
+  const id = req.params.id;
+  console.log(id);
+  try {
+    const delete_comment = await Comment.findByIdAndDelete(id);
+    console.log(delete_comment);
+    res.status(200).json({
+      status: "success",
+      data: {
+        delete_comment,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};

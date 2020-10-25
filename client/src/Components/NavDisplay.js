@@ -99,7 +99,7 @@ const Navbar = (props) => {
                     <ul className="nav navbar-nav">
                       {genres.map((genre) => (
                         <li key={genre._id}>
-                          <Link to={`/genre/:${genre.genre}`}>
+                          <Link to={`/genre-specific/:${genre.genre}`}>
                             {genre.genre}
                           </Link>
                         </li>
@@ -127,7 +127,7 @@ const Navbar = (props) => {
                     <ul className="nav navbar-nav">
                       {languages.map((lang) => (
                         <li key={lang._id}>
-                          <Link to={`/language/:${lang.language}`}>
+                          <Link to={`/language-specific/:${lang.language}`}>
                             {lang.language}
                           </Link>
                         </li>
@@ -155,7 +155,7 @@ const Navbar = (props) => {
                     <ul className="nav navbar-nav">
                       {categories.map((category) => (
                         <li key={category._id}>
-                          <Link to={`/category/:${category.category}`}>
+                          <Link to={`/category-specific/:${category.category}`}>
                             {category.category}
                           </Link>
                         </li>

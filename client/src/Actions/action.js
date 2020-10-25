@@ -14,6 +14,7 @@ export const FETCH_DATA_PENDING = "FETCH_DATA_PENDING";
 export const FETCH_CATEGORIES_BY_ID_SUCCESS = "FETCH_CATEGORIES_BY_ID_SUCCESS";
 export const FETCH_GENRES_BY_ID_SUCCESS = "FETCH_GENRES_BY_ID_SUCCESS";
 export const FETCH_LANGUAGES_BY_ID_SUCCESS = "FETCH_LANGUAGES_BY_ID_SUCCESS";
+export const FETCH_COMMENTS_ALL_SUCCESS="FETCH_COMMENTS_ALL_SUCCESS"
 export function fetchGenresSuccess(result) {
   console.log(result.data.data.genres);
   return {
@@ -76,6 +77,13 @@ export function fetchUsersSuccess(result) {
   return {
     type: FETCH_USERS_SUCCESS,
     result: result.data.data.users,
+  };
+}
+export function fetchCommentsSuccess(result) {
+  console.log(result.data.data.comments);
+  return {
+    type: FETCH_COMMENTS_SUCCESS,
+    result: result.data.data.all_comments,
   };
 }
 export function fetchCommentsSuccessByID(result) {
