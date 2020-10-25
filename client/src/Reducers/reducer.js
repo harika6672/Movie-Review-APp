@@ -135,7 +135,7 @@ export function mainReducer(state = initialState, action) {
       return {
         ...state,
         pending: false,
-        comments: action.result,
+        commentsAll: action.result,
       };
     case FETCH_GENRE_SUCCESS:
       return {
