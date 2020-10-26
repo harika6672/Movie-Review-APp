@@ -28,8 +28,8 @@ const ShowCategories = (props) => {
         setTimeout(()=>window.location.reload(),2000)
       })
       .catch((err) => {
-        console.log(err);
-      // });
+        // console.log(err);
+      });
   };
   return (
     <>
