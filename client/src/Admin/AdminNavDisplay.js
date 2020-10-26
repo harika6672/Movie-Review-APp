@@ -6,7 +6,7 @@ const AdminNavDisplay = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-custom">
       <div className="container">
-        <a href="#" className="navbar-brand">Admin</a>
+        <a href="#" className="navbar-brand" style={{color:"white"}}>Admin</a>
         <div className="d-flex ml-auto">
           <button
             className="navbar-toggler"
