@@ -17,44 +17,44 @@ exports.loginController = async (req, res) => {
         if (email_verified) {
           User.findOne({ email: email }).exec(async (err, user) => {
             if (err) {
-              console.log("Error in finding existing data");
+              // console.log("Error in finding existing data");
               res.status(400).send("Some error occured");
             } else {
               if (user) {
-                console.log("User exists already");
+                // console.log("User exists already");
                 // res.status(200).send("User already exists");
                 res.status(200).json({
                   message:"User already exists",
                   user
                 })
               } else {
-                console.log("before creating user");
+                // console.log("before creating user");
                 let password = name;
                 const newUser = await User.create({ email, name, password });
-                console.log("after creating user");
+                // console.log("after creating user");
                 res.status(201).json({
                   status: "success",
                   user: newUser,
                 });
-                console.log(newUser);
+                // console.log(newUser);
               }
             }
           });
         }
       });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 };
 exports.signUpController = async (req, res) => {
   try {
     User.findOne({ email: req.body.email }).exec(async (err, user) => {
       if (err) {
-        console.log("Error in finding existing data");
+        // console.log("Error in finding existing data");
         res.status(400).send("Some error occured");
       } else {
         if (user) {
-          console.log("User exists already");
+          // console.log("User exists already");
           res.status(200).send("User already exists");
         } else {
           const newUser = await User.create(req.body);
@@ -77,7 +77,7 @@ exports.signUpController = async (req, res) => {
 exports.getUsersController = async (req, res) => {
   try {
     const users = await User.find();
-    console.log(users);
+    // console.log(users);
     res.status(200).json({
       status: "success",
       data: {
@@ -92,12 +92,12 @@ exports.getUsersController = async (req, res) => {
   }
 };
 exports.deleteuserController = async (req, res) => {
-  console.log("In delete");
+  // console.log("In delete");
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   try {
     const delete_user = await User.findByIdAndDelete(id);
-    console.log(delete_user);
+    // console.log(delete_user);
     res.status(200).json({
       status: "success",
       data: {
@@ -109,6 +109,6 @@ exports.deleteuserController = async (req, res) => {
       status: "fail",
       message: err,
     });
-    console.log(err);
+    // console.log(err);
   }
 };

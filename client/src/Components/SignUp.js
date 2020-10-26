@@ -71,7 +71,7 @@ const SignUp = () => {
 
   const SubmitUserData = (e) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
     if(user.name===""||user.password===""||user.email===""){
             setMessage("**All Fields are Required")
     }
@@ -79,7 +79,7 @@ const SignUp = () => {
     axios
       .post("/signup", user)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         if(response.data==="User already exists"){
           setMessage("You are already have an account..Please Sign In")
         }else
@@ -87,7 +87,7 @@ const SignUp = () => {
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   }
 };

@@ -20,8 +20,8 @@ const AllMoviesDisplay = (props) => {
     fetchData();
   }, []);
   const handlePageChange=(pageNumber)=>{
-    console.log("Page change")
-    console.log(pageNumber)
+    // console.log("Page change")
+    // console.log(pageNumber)
     fetchMovies(pageNumber,5)
     setPage(pageNumber)
   }

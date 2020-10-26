@@ -10,7 +10,7 @@ const LanguageSpecific = (props) => {
   const { languageSpecificMovies, fetchMovieByLanguage, pending } = props;
   useEffect(() => {
     const languageName = props.match.params.lname.slice(1);
-    console.log(languageName);
+    // console.log(languageName);
     async function fetchData() {
       await fetchMovieByLanguage(languageName);
     }

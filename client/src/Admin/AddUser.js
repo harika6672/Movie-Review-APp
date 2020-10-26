@@ -23,12 +23,12 @@ const AddUser = () => {
     axios
       .post("/AddUser", user)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setAlert(true)
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

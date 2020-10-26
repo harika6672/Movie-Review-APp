@@ -75,12 +75,12 @@ exports.updatelanguageController = async (req, res) => {
   }
 };
 exports.deletelanguageController = async (req, res) => {
-  console.log("In delete");
+  // console.log("In delete");
   const id = req.params.l_id;
-  console.log(id);
+  // console.log(id);
   try {
     const delete_language = await Language.findByIdAndDelete(id);
-    console.log(delete_language);
+    // console.log(delete_language);
     res.status(200).json({
       status: "success",
       data: {

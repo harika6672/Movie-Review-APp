@@ -6,14 +6,14 @@ const GoogleSignUp = () => {
   const [alertdisplay, setAlert]=useState(false)
   const history=useHistory();
   const responseGoogle = (response) => {
-    console.log(response.tokenId);
+    // console.log(response.tokenId);
     const data = {
       tokenId: response.tokenId,
     };
     axios
       .post("/signup/googlelogin", data)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if(res.data.status==="success"){
           // alert("Yayy..You created the account");
           setAlert(true);

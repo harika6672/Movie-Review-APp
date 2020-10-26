@@ -19,19 +19,19 @@ const ShowUsers = (props) => {
     fetchUsers();
   }, []);
   const deleteItem = (u_id) => {
-    console.log(u_id);
+    // console.log(u_id);
     axios
       .delete(`/user/${u_id}`)
 
       .then((res) => {
-        console.log(res.status);
+        // console.log(res.status);
         // alert("Item Deleted");
         setAlert(true)
         setTimeout(()=>window.location.reload(),2000)
         
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

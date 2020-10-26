@@ -31,7 +31,7 @@ const UpdatePost = (props) => {
   const summaryRef = React.useRef("");
 
   const clearFields = () => {
-    console.log("In clear function");
+    // console.log("In clear function");
     movieRef.current.value = " ";
     categoryRef.current.value = " ";
     genreRef.current.value = " ";
@@ -42,7 +42,7 @@ const UpdatePost = (props) => {
   };
 
   const id = props.match.params.p_id.slice(1);
-  console.log(id)
+  // console.log(id)
 
   useEffect(() => {
     if (post) {
@@ -68,15 +68,15 @@ const UpdatePost = (props) => {
         category:categoryRef.current.value
       }
 
-      console.log(obj);
+      // console.log(obj);
       axios
         .patch(`/movie/${id}`, obj)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           clearFields();
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
         });
     }
 

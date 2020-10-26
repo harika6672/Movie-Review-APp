@@ -89,16 +89,16 @@ const MovieDetailsForm = (props) => {
       data.append("language", movieObj.language);
       data.append("category", movieObj.category);
 
-      console.log(...data);
+      // console.log(...data);
       axios
         .post("/movies", data)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           setAlert(true)
           clearFields();
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
         });
     }
   };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import GoogleSignIn from "./GoogleSignIn";
 import "../css/SignUpStyle.css";
 const SignInHome = (props) => {
-console.log(props);
+// console.log(props);
 if(props.location.state!==undefined){
   var data={
     status:props.location.state.fromModal,

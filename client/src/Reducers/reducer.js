@@ -53,7 +53,7 @@ const filtering_data = (res) => {
 
     t.movieImg = base64Flag + imageStr;
   });
-  console.log(res);
+  // console.log(res);
   return res;
 };
 
@@ -174,35 +174,35 @@ export function mainReducer(state = initialState, action) {
 }
 
 export const getGenres = (state) => {
-  console.log(state.genres);
+  // console.log(state.genres);
   return state.genres;
 };
 export const getLanguages = (state) => {
-  console.log(state.languages);
+  // console.log(state.languages);
   return state.languages;
 };
 export const getCategories = (state) => {
-  console.log(state.categories);
+  // console.log(state.categories);
   return state.categories;
 };
 export const getMovies = (state) => {
-  console.log(state.movies);
+  // console.log(state.movies);
   return state.movies;
 };
 export const getMovieByID = (state) => {
-  console.log(state.movie[0]);
+  // console.log(state.movie[0]);
   return state.movie[0];
 };
 export const getMovieByGenre = (state) => {
-  console.log(state.genreSpecificMovies);
+  // console.log(state.genreSpecificMovies);
   return state.genreSpecificMovies;
 };
 export const getMovieByLanguage = (state) => {
-  console.log(state.languageSpecificMovies);
+  // console.log(state.languageSpecificMovies);
   return state.languageSpecificMovies;
 };
 export const getMovieByCategory = (state) => {
-  console.log(state.categorySpecificMovies);
+  // console.log(state.categorySpecificMovies);
   return state.categorySpecificMovies;
 };
 export const getDataPending = (state) => state.pending;
@@ -225,26 +225,26 @@ export const getCurrentUserName = (state) => {
   return state.current_user_name;
 };
 export const getCommentsByID = (state) => {
-  console.log(state.comments);
+  // console.log(state.comments);
   return state.comments;
 };
 export const getCategoryById = (state) => {
-  console.log("In reducers... categories by id");
+  // console.log("In reducers... categories by id");
   return state.categoryById[0];
 };
 export const getGenreById = (state) => {
-  console.log("In reducers... genres by id");
+  // console.log("In reducers... genres by id");
   return state.genreById[0];
 };
 export const getLanguageById = (state) => {
-  console.log("In reducers... languages by id");
+  // console.log("In reducers... languages by id");
   return state.languageById[0];
 };
 export const getPostsCount=(state)=>{
-  console.log(`Posts Count is ${state.postsCount}`)
+  // console.log(`Posts Count is ${state.postsCount}`)
   return state.postsCount
 }
 export const getAllComments=(state)=>{
-  console.log(`Comments are ${state.commentsAll}`)
+  // console.log(`Comments are ${state.commentsAll}`)
   return state.commentsAll
 }

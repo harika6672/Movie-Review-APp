@@ -15,18 +15,18 @@ const ShowCategories = (props) => {
   } = props;
   const [alertdisplay, setAlert]=useState(false)
   const deleteItem = (c_id) => {
-    console.log(c_id);
+    // console.log(c_id);
     axios
       .delete(`/categories/${c_id}`)
 
       .then((res) => {
-        console.log(res.status);
+        // console.log(res.status);
         // alert("Item Deleted");
         setAlert(true)
         setTimeout(()=>window.location.reload(),2000)
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   useEffect(() => {

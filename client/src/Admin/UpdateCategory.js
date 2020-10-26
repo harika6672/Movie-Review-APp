@@ -9,7 +9,7 @@ const UpdateCategory = (props) => {
 
   const inputRef = React.useRef(null);
   const clearFields = () => {
-    console.log("In clear function");
+    // console.log("In clear function");
     inputRef.current.value = " ";
   };
 
@@ -33,18 +33,18 @@ const UpdateCategory = (props) => {
         category: inputRef.current.value,
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return category ? (
     <form onSubmit={submitHandler}>
       <div className="form-group">
         <label htmlFor="category">Category</label>
-        {console.log(category)}
+        {/* {console.log(category)} */}
         <input
           type="text"
           name="category"

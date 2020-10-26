@@ -21,23 +21,23 @@ count,
     fetchMovies(1,5);
   }, []);
   const deleteItem = (p_id) => {
-    console.log(p_id);
+    // console.log(p_id);
     axios
       .delete(`/movie/${p_id}`)
 
       .then((res) => {
-        console.log(res.status);
+        // console.log(res.status);
         // alert("Item Deleted");
         setAlert(true)
         setTimeout(()=>window.location.reload(),2000)
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   const handlePageChange=(pageNumber)=>{
-    console.log("Page change")
-    console.log(pageNumber)
+    // console.log("Page change")
+    // console.log(pageNumber)
     fetchMovies(pageNumber,5)
     setPage(pageNumber)
   }

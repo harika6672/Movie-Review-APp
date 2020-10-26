@@ -10,16 +10,16 @@ const AddGenre = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log(genreObj);
+    // console.log(genreObj);
     axios
       .post("/genres", genreObj)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setAlert(true)
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

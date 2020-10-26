@@ -23,22 +23,22 @@ const AddComment = (props) => {
       user,
      
     };
-    console.log(commentObj);
+    // console.log(commentObj);
    
     if (user === " " || user===null) {
-      console.log("modal open")
+      // console.log("modal open")
       setModal(true);
     } else {
-      console.log("In post block")
+      // console.log("In post block")
       axios
         .post("/comments", commentObj)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setComment("");
           window.location.reload();
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
         });
     }
    };
@@ -50,9 +50,7 @@ const AddComment = (props) => {
       {isModal ? (
        
         <CustomModal id={movieId}/>
-      ) : (
-        console.log("modal is false")
-      )}
+      ) : ""}
       <form onSubmit={submitHandler}>
         <input
           type="text"

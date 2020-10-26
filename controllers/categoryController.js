@@ -75,12 +75,12 @@ exports.updatecategoryController = async (req, res) => {
   }
 };
 exports.deletecategoryController = async (req, res) => {
-  console.log("In delete");
+  // console.log("In delete");
   const id = req.params.c_id;
-  console.log(id);
+  // console.log(id);
   try {
     const delete_category = await Category.findByIdAndDelete(id);
-    console.log(delete_category);
+    // console.log(delete_category);
     res.status(200).json({
       status: "success",
       data: {

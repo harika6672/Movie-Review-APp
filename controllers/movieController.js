@@ -12,9 +12,9 @@ exports.movieController = async (req, res) => {
         contentType: req.file.mimetype,
       },
     };
-    console.log(movies);
+    // console.log(movies);
     const newMovie = await Movie.create(movies);
-    console.log(newMovie);
+    // console.log(newMovie);
     res.status(201).json({
       status: "success",
       data: {
@@ -41,7 +41,7 @@ exports.getmovieController = async (req, res) => {
   try {
     const count=await Movie.count()
     const movies = await Movie.find().limit(limit).skip(skip)
-    console.log(movies)
+    // console.log(movies)
     res.status(200).json({
       status: "success",
       data: {
@@ -57,12 +57,12 @@ exports.getmovieController = async (req, res) => {
   }
 };
 exports.getmovieByIDController = async (req, res) => {
-  console.log("movie by id")
-  console.log(req.params.id);
+  // console.log("movie by id")
+  // console.log(req.params.id);
   let id=req.params.id
   if(req.params.id[0]===":"){
      id=(req.params.id).slice(1);
-     console.log(`on reload id is ${id}`)
+    //  console.log(`on reload id is ${id}`)
   }
   try {
     const movie = await Movie.find({ _id: id });
@@ -80,17 +80,17 @@ exports.getmovieByIDController = async (req, res) => {
   }
 };
 exports.updatemovieController = async (req, res) => {
-  console.log("In update movie controller");
+    // console.log("In update movie controller");
   const id = req.params.id;
-console.log( req.params.id);
-   console.log(req.body.category)
+// console.log( req.params.id);
+  //  console.log(req.body.category)
 
   try {
     const updated_movie = await Movie.findByIdAndUpdate(id, req.body, {
       new: true,
     });
 
-    console.log(updated_movie);
+    // console.log(updated_movie);
     res.status(200).json({
       status: "success",
       data: {
@@ -106,11 +106,11 @@ console.log( req.params.id);
 };
 
 exports.getmovieByGenreController = async (req, res) => {
-  console.log(req.params.id);
+  // console.log(req.params.id);
   try {
-    console.log("In Handler");
+    // console.log("In Handler");
     const genreSpecific = await Movie.find({ genre: req.params.genre });
-    console.log(genreSpecific);
+    // console.log(genreSpecific);
     res.status(200).json({
       status: "success",
       data: { genreSpecific },
@@ -123,13 +123,13 @@ exports.getmovieByGenreController = async (req, res) => {
   }
 };
 exports.getmovieByLanguageController = async (req, res) => {
-  console.log(req.params);
+  // console.log(req.params);
   try {
-    console.log("In Handler");
+    // console.log("In Handler");
     const languageSpecific = await Movie.find({
       language: req.params.language,
     });
-    console.log(languageSpecific);
+    // console.log(languageSpecific);
     res.status(200).json({
       status: "success",
       data: { languageSpecific },
@@ -142,13 +142,13 @@ exports.getmovieByLanguageController = async (req, res) => {
   }
 };
 exports.getmovieByCategoryController = async (req, res) => {
-  console.log(req.params);
+  // console.log(req.params);
   try {
-    console.log("In Handler");
+    // console.log("In Handler");
     const categorySpecific = await Movie.find({
       category: req.params.category,
     });
-    console.log(categorySpecific);
+    // console.log(categorySpecific);
     res.status(200).json({
       status: "success",
       data: { categorySpecific },
@@ -161,12 +161,12 @@ exports.getmovieByCategoryController = async (req, res) => {
   }
 };
 exports.deletemovieController = async (req, res) => {
-  console.log("In delete");
+  // console.log("In delete");
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   try {
     const delete_movie = await Movie.findByIdAndDelete(id);
-    console.log(delete_movie);
+    // console.log(delete_movie);
     res.status(200).json({
       status: "success",
       data: {

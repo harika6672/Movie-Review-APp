@@ -17,19 +17,19 @@ const ShowCategories = (props) => {
     fetchGenres();
   }, []);
   const deleteItem = (g_id) => {
-    console.log(g_id);
+    // console.log(g_id);
     axios
       .delete(`/genres/${g_id}`)
 
       .then((res) => {
-        console.log(res.status);
+        // console.log(res.status);
         // alert("Item Deleted");
         setAlert(true)
         setTimeout(()=>window.location.reload(),2000)
       })
       .catch((err) => {
         console.log(err);
-      });
+      // });
   };
   return (
     <>

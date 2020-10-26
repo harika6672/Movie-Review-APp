@@ -23,11 +23,11 @@ export function fetchGenres() {
       .get("/genres")
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchGenresSuccess(res));
         return res;
       }).catch(err=>{
-        console.log(err)
+        // console.log(err)
         return null
       });
   };
@@ -39,11 +39,11 @@ export function fetchLanguages() {
       .get("/languages")
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchLanguagesSuccess(res));
         return res;
       }).catch(err=>{
-        console.log(err)
+        // console.log(err)
         return null
       });
   };
@@ -55,11 +55,11 @@ export function fetchCategories() {
       .get("/categories")
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchCategoriesSuccess(res));
         return res;
       }).catch(err=>{
-        console.log(err)
+        // console.log(err)
         return null
       });
   };
@@ -72,25 +72,25 @@ export function fetchMovies(page,limit) {
       .get(`/movies?_page=${page}&_limit=${limit}`)
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchMoviesSuccess(res));
         return res;
       })
       .catch(err=>{
-        console.log(err)
+        // console.log(err)
         return null
       });
   };
 }
 export function fetchMovieByID(id) {
   return (dispatch) => {
-    console.log(id);
+    // console.log(id);
     dispatch(fetchDataPending());
     axios
       .get(`/movie/${id}`)
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchMovieSuccessByID(res));
         return res;
       });
@@ -98,14 +98,14 @@ export function fetchMovieByID(id) {
 }
 export function fetchCategoriesByID(c_id) {
   return (dispatch) => {
-    console.log(c_id);
+    // console.log(c_id);
     dispatch(fetchDataPending());
     axios
       .get(`/categories/${c_id}`)
 
       .then((res) => {
-        console.log("In fetch categories by id");
-        console.log(res);
+        // console.log("In fetch categories by id");
+        // console.log(res);
         dispatch(fetchCategoriesSuccessByID(res));
         return res;
       });
@@ -113,14 +113,14 @@ export function fetchCategoriesByID(c_id) {
 }
 export function fetchGenresByID(g_id) {
   return (dispatch) => {
-    console.log(g_id);
+    // console.log(g_id);
     dispatch(fetchDataPending());
     axios
       .get(`/genres/${g_id}`)
 
       .then((res) => {
-        console.log("In fetch genres by id");
-        console.log(res);
+        // console.log("In fetch genres by id");
+        // console.log(res);
         dispatch(fetchGenresSuccessByID(res));
         return res;
       });
@@ -129,14 +129,14 @@ export function fetchGenresByID(g_id) {
 
 export function fetchLanguagesByID(l_id) {
   return (dispatch) => {
-    console.log(l_id);
+    // console.log(l_id);
     dispatch(fetchDataPending());
     axios
       .get(`/languages/${l_id}`)
 
       .then((res) => {
-        console.log("In fetch languages by id");
-        console.log(res);
+        // console.log("In fetch languages by id");
+        // console.log(res);
         dispatch(fetchLanguagesSuccessByID(res));
         return res;
       });
@@ -144,13 +144,13 @@ export function fetchLanguagesByID(l_id) {
 }
 export function fetchMovieByGenre(genre) {
   return (dispatch) => {
-    console.log(genre);
+    // console.log(genre);
     dispatch(fetchDataPending());
     axios
       .get(`/genre/movie/${genre}`)
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchMovieSuccessByGenre(res));
         return res;
       });
@@ -158,13 +158,13 @@ export function fetchMovieByGenre(genre) {
 }
 export function fetchMovieByLanguage(language) {
   return (dispatch) => {
-    console.log(language);
+    // console.log(language);
     dispatch(fetchDataPending());
     axios
       .get(`/language/movieSpecificLang/${language}`)
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchMovieSuccessByLanguage(res));
         return res;
       });
@@ -172,13 +172,13 @@ export function fetchMovieByLanguage(language) {
 }
 export function fetchMovieByCategory(category) {
   return (dispatch) => {
-    console.log(category);
+    // console.log(category);
     dispatch(fetchDataPending());
     axios
       .get(`/category/movieCategory/${category}`)
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchMovieSuccessByCategory(res));
         return res;
       });
@@ -186,7 +186,7 @@ export function fetchMovieByCategory(category) {
 }
 
 export function fetchUsers() {
-  console.log("fetching users");
+  // console.log("fetching users");
 
   return (dispatch) => {
     dispatch(fetchDataPending());
@@ -194,7 +194,7 @@ export function fetchUsers() {
       .get("/signin")
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchUsersSuccess(res));
         return res;
       })
@@ -204,7 +204,7 @@ export function fetchUsers() {
   };
 }
 export function fetchComments() {
-  console.log("fetching comments");
+  // console.log("fetching comments");
 
   return (dispatch) => {
     dispatch(fetchDataPending());
@@ -212,12 +212,12 @@ export function fetchComments() {
       .get("/comments")
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch(fetchCommentsSuccess(res));
         return res;
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
 }
@@ -234,19 +234,19 @@ export function fetchAuthStatus(role, email, name) {
 
 export function fetchCommentsByID(id) {
   return (dispatch) => {
-    console.log(id);
+    // console.log(id);
     dispatch(fetchDataPending());
     axios
       .get(`/comments/${id}`)
 
       .then((res) => {
-        console.log(res);
+        // console.log(res);
 
         dispatch(fetchCommentsSuccessByID(res));
         return res;
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
 }

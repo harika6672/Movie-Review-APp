@@ -5,12 +5,12 @@ import { useHistory } from "react-router";
 const GoogleSignIn = (props) => {
   const history=useHistory();
   const responseGoogle = (response) => {
-    console.log(response.tokenId);
+    // console.log(response.tokenId);
     const data = {
       tokenId: response.tokenId,
     };
     axios.post("/signin/googlelogin", data).then((res) => {
-      console.log(res);
+      // console.log(res);
       localStorage.setItem("user_stored", res.data.user.name);
       localStorage.setItem("access", res.data.user.role);
       if(props.data){

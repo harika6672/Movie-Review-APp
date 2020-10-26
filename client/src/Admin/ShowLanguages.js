@@ -18,18 +18,18 @@ const ShowLanguages = (props) => {
     fetchLanguages();
   }, []);
   const deleteItem = (l_id) => {
-    console.log(l_id);
+    // console.log(l_id);
     axios
       .delete(`/languages/${l_id}`)
 
       .then((res) => {
-        console.log(res.status);
+        // console.log(res.status);
         // alert("Item Deleted");
         setAlert(true)
         setTimeout(()=>window.location.reload(),2000)
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

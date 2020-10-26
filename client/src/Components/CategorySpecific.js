@@ -10,7 +10,7 @@ const CategorySpecific = (props) => {
   const { categorySpecificMovies, fetchMovieByCategory, pending } = props;
   useEffect(() => {
     const categoryName = props.match.params.cname.slice(1);
-    console.log(categoryName);
+    // console.log(categoryName);
     async function fetchData() {
       await fetchMovieByCategory(categoryName);
     }

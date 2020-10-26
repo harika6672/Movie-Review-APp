@@ -10,16 +10,16 @@ const AddCategory = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log(categoryObj);
+    // console.log(categoryObj);
     axios
       .post("/categories", categoryObj)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setAlert(true)
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

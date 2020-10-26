@@ -9,7 +9,7 @@ const SignIn = (props) => {
   const [userObj, setUserObj] = useState({ email: " ", password: " " });
   const [alertdisplay, setAlert] = useState(false);
   const [alertdisplayf, setAlertf] = useState(false);
-  console.log(props);
+  // console.log(props);
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -23,7 +23,7 @@ const SignIn = (props) => {
       [nam]: val,
     });
   };
-  console.log(props)
+  // console.log(props)
   const history=useHistory()
   const submitHandler = async (e) => {
     e.preventDefault();

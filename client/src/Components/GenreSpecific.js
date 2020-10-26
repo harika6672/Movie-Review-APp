@@ -10,7 +10,7 @@ const GenreSpecific = (props) => {
   const { genreSpecificMovies, fetchMovieByGenre, pending } = props;
   useEffect(() => {
     const genreName = props.match.params.gname.slice(1);
-    console.log(genreName);
+    // console.log(genreName);
     async function fetchData() {
       await fetchMovieByGenre(genreName);
     }

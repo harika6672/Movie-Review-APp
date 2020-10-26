@@ -9,7 +9,7 @@ const UpdateCategory = (props) => {
 
   const inputRef = React.useRef(null);
   const clearFields = () => {
-    console.log("In clear function");
+    // console.log("In clear function");
     inputRef.current.value = " ";
   };
 
@@ -33,18 +33,18 @@ const UpdateCategory = (props) => {
         language: inputRef.current.value,
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return language ? (
     <form onSubmit={submitHandler}>
       <div className="form-group">
         <label htmlFor="language">Language</label>
-        {console.log(language)}
+        {/* {console.log(language)} */}
         <input
           type="text"
           name="language"

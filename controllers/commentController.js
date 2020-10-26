@@ -19,7 +19,7 @@ exports.commentController = async (req, res) => {
 };
 exports.getcommentController = async (req, res) => {
   try {
-    console.log(req.params);
+    // console.log(req.params);
     const movie = await Movie.find({ _id: req.params.id });
     const movieName=movie[0]["movieName"]
     const comments = await Comment.find({ post_id: movieName });
@@ -39,9 +39,9 @@ exports.getcommentController = async (req, res) => {
 };
 exports.getAllcommentController = async (req, res) => {
   try {
-    console.log("In getting all comments");
+    // console.log("In getting all comments");
     const all_comments = await Comment.find({  });
-    console.log(all_comments)
+    // console.log(all_comments)
     res.status(200).json({
       status: "success",
       data: {
@@ -56,12 +56,12 @@ exports.getAllcommentController = async (req, res) => {
   }
 };
 exports.deletecommentController = async (req, res) => {
-  console.log("In delete");
+  // console.log("In delete");
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   try {
     const delete_comment = await Comment.findByIdAndDelete(id);
-    console.log(delete_comment);
+    // console.log(delete_comment);
     res.status(200).json({
       status: "success",
       data: {

@@ -10,16 +10,16 @@ const AddLanguage = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log(langObj);
+    // console.log(langObj);
     axios
       .post("/languages", langObj)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setAlert(true)
         clearFields();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

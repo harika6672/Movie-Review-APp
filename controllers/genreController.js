@@ -72,12 +72,12 @@ exports.updategenreController = async (req, res) => {
   }
 };
 exports.deletegenreController = async (req, res) => {
-  console.log("In delete");
+  // console.log("In delete");
   const id = req.params.g_id;
-  console.log(id);
+  // console.log(id);
   try {
     const delete_genre = await Genre.findByIdAndDelete(id);
-    console.log(delete_genre);
+    // console.log(delete_genre);
     res.status(200).json({
       status: "success",
       data: {
