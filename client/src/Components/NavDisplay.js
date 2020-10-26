@@ -70,17 +70,9 @@ const Navbar = (props) => {
             </button>
           </div>
           <div className="collapse navbar-collapse" id="globalNavbar">
-            {/* <form className="form-inline form-navbar my-2 my-lg-0 order-2">
-              <input
-                className="form-control"
-                name="s"
-                type="text"
-                placeholder="Search"
-              />
-              {console.log(user)}
-            </form> */}
+            
             <ul className="navbar-nav mr-auto order-1">
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <a
                   className="nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
@@ -98,7 +90,7 @@ const Navbar = (props) => {
                   <div className="navbar-collapse navbar-top-collapse">
                     <ul className="nav navbar-nav">
                       {genres.map((genre) => (
-                        <li key={genre._id}>
+                        <li key={genre._id} data-toggle="collapse" data-target=".navbar-collapse.show">
                           <Link to={`/genre-specific/:${genre.genre}`}>
                             {genre.genre}
                           </Link>
@@ -126,7 +118,7 @@ const Navbar = (props) => {
                   <div className="navbar-collapse navbar-top-collapse">
                     <ul className="nav navbar-nav">
                       {languages.map((lang) => (
-                        <li key={lang._id}>
+                        <li key={lang._id} data-toggle="collapse" data-target=".navbar-collapse.show">
                           <Link to={`/language-specific/:${lang.language}`}>
                             {lang.language}
                           </Link>
@@ -154,7 +146,7 @@ const Navbar = (props) => {
                   <div className="navbar-collapse navbar-top-collapse">
                     <ul className="nav navbar-nav">
                       {categories.map((category) => (
-                        <li key={category._id}>
+                        <li key={category._id} data-toggle="collapse" data-target=".navbar-collapse.show">
                           <Link to={`/category-specific/:${category.category}`}>
                             {category.category}
                           </Link>
@@ -164,13 +156,13 @@ const Navbar = (props) => {
                   </div>
                 </div>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <Link to="/" className="nav-link">
                   Home 
                 </Link>
               </li>
               <li
-                className="nav-item"
+                className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"
                 style={
                   user_access === "admin" || user_access==="Admin"
                     ? { display: "block" }
@@ -184,36 +176,11 @@ const Navbar = (props) => {
                 >
                   Admin
                 </a>
-
-                {/* <div
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <div className="navbar-collapse navbar-top-collapse">
-                  <ul className="nav navbar-nav">
-                    <li>
-                      <Link to="/admin/add-category">Add Category</Link>
-                    </li>
-                    <li>
-                      <Link to="/admin/add-genre">Add Genre</Link>
-                    </li>
-                    <li>
-                      <Link to="/admin/add-language">Add Language</Link>
-                    </li>
-                    <li>
-                      <Link to="/admin/add-post">Add Movie Review</Link>
-                    </li>
-                    <li>
-                      <Link to="/admin/add-user">Add User</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
               </li>
             </ul>
             <ul className="navbar-nav d-none d-lg-flex ml-2 order-3">
-              <li
-                className="nav-item"
+              <li data-toggle="collapse" data-target=".navbar-collapse.show"
+                className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"
                 style={
                   user_stored === " "
                     ? { display: "block" }
@@ -240,7 +207,7 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li
-                className="nav-item"
+                className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"
                 style={
                   user_stored !== " "
                     ? { display: "block" }
