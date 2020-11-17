@@ -34,12 +34,14 @@ const AllMoviesDisplay = (props) => {
   //     <Loader type="Grid" color="#00BFFF" height={100} width={100} />
   //   </div>
   // ) : (
+    let flag=0;
   const posts=movies.filter((data)=>{
     if(search == null)
         
         return data
     else if(data.movieName.toLowerCase().includes(search.toLowerCase())){
-        return data
+      flag++;
+      return data
     }
   }).map((movie) => {
       return (<div className="post_movie">
@@ -63,7 +65,7 @@ const AllMoviesDisplay = (props) => {
       {pending ? (
     <div style={{ textAlign: "center" }}>
       <Loader type="Grid" color="#00BFFF" height={100} width={100} />
-    </div>):(posts.length!==0 && pending===false?posts:<h6 style={{color:'blue', fontStyle:"italic", paddingTop:"10px"}}>No Search Results Found</h6>)}
+    </div>):(posts.length!==0 ?posts:`${flag}`!==0?<h6 style={{color:'blue', fontStyle:"italic", paddingTop:"10px"}}>No Search Results Found</h6>:"")}
       <div className="col-12">
     {movies.length>0?
    
