@@ -11,17 +11,16 @@ const AllMoviesDisplay = (props) => {
   const { movies, fetchMovies, pending, count } = props;
   const [activePage, setPage]=useState(1)
   const [search, setSearch]=useState(null)
-  
   useEffect(() => {
-    async function fetchData() {
-   
+    // async function fetchData() {
+      // const movies = await axios("http://localhost:8001/movies");
       fetchMovies(1,5);
-    }
-    fetchData();
+    // }
+    // fetchData();
   }, []);
   const handlePageChange=(pageNumber)=>{
-    // console.log("Page change")
-    // console.log(pageNumber)
+    console.log("Page change")
+    console.log(pageNumber)
     fetchMovies(pageNumber,5)
     setPage(pageNumber)
   }
@@ -34,14 +33,15 @@ const AllMoviesDisplay = (props) => {
   //     <Loader type="Grid" color="#00BFFF" height={100} width={100} />
   //   </div>
   // ) : (
-    let flag=0;
+   let flag=0
   const posts=movies.filter((data)=>{
-    if(search == null)
+    if(search == null){
         
         return data
+    }
     else if(data.movieName.toLowerCase().includes(search.toLowerCase())){
       flag++;
-      return data
+        return data
     }
   }).map((movie) => {
       return (<div className="post_movie">
@@ -49,7 +49,7 @@ const AllMoviesDisplay = (props) => {
           <img src={movie.movieImg} alt="img" border="0" />
         </a>
         <h2 style={{fontStyle:"italic"}}>
-          <Link to={`/movie-view/:${movie._id}`}>{movie.movieName}</Link>
+          <Link to={`/movie/:${movie._id}`}>{movie.movieName}</Link>
         </h2>
       </div>
       )
